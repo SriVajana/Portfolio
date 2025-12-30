@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sri Vajana | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --bg:#020617;
-  --card:#020617;
-  --primary:#818cf8;
-  --secondary:#22d3ee;
+  --bg:#0f172a;
+  --card:#111827;
+  --accent:#3b82f6;
   --text:#e5e7eb;
-  --muted:#94a3b8;
+  --muted:#9ca3af;
+  --border:#1f2937;
 }
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family:'Poppins',sans-serif;
-  background:radial-gradient(circle at top,#020617,#000);
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
   color:var(--text);
 }
 .navbar{
@@ -29,118 +29,66 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:0 30px;
-  background:rgba(2,6,23,0.9);
-  border-bottom:1px solid rgba(148,163,184,.15)
+  background:#020617;
+  border-bottom:1px solid var(--border);
 }
-.logo{color:var(--secondary);font-weight:700;font-size:1.2rem}
+.logo{font-weight:600}
 .navbar a{
   color:var(--muted);
   text-decoration:none;
   margin-left:20px;
 }
-.navbar a:hover{color:var(--secondary)}
-
 .dashboard{
-  min-height:calc(100vh - 64px);
   display:grid;
   grid-template-columns:1.2fr 1fr;
   gap:20px;
-  padding:20px;
-}
-
-.card{
-  background:rgba(2,6,23,.85);
-  border-radius:18px;
   padding:24px;
-  box-shadow:0 20px 40px rgba(0,0,0,.6);
 }
-
-.hero h1{
-  font-size:3rem;
-  background:linear-gradient(135deg,var(--primary),var(--secondary));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:24px;
+  border:1px solid var(--border);
 }
+.hero h1{font-size:2.4rem}
 .hero p{color:var(--muted)}
-
-.buttons{
-  margin-top:20px;
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
+.buttons{margin-top:18px;display:flex;gap:12px}
 .btn{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 12px 24px;
-  border-radius: 30px;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
+  padding:10px 18px;
+  border-radius:8px;
+  text-decoration:none;
+  font-size:.9rem;
 }
-
-.btn.primary{
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  color: #020617;
-}
-
-.btn.secondary{
-  background: transparent;
-  border: 1.5px solid var(--secondary);
-  color: var(--secondary);
-}
-
-.btn:hover{
-  transform: translateY(-3px);
-}
-
-/* Optional icon circle inside button */
-.btn span.icon{
-  display:inline-flex;
-  width:24px;
-  height:24px;
-  justify-content:center;
-  align-items:center;
-  border-radius:50%;
-  background:white;
-  color:var(--primary);
-  font-size:0.9rem;
-}
-
+.btn.primary{background:var(--accent);color:white}
+.btn.secondary{border:1px solid var(--border);color:var(--text)}
 .skill{margin-bottom:14px}
-.skill span{font-size:.9rem}
 .bar{
-  height:8px;
+  height:6px;
   background:#020617;
-  border-radius:6px;
+  border-radius:4px;
   margin-top:6px;
 }
 .bar div{
   height:100%;
-  border-radius:6px;
-  background:linear-gradient(90deg,var(--primary),var(--secondary));
+  background:var(--accent);
+  border-radius:4px;
 }
-
 .project{
-  border:1px solid rgba(148,163,184,.2);
-  border-radius:14px;
+  border:1px solid var(--border);
+  border-radius:10px;
   padding:16px;
 }
 .project a{
-  color:var(--secondary);
+  color:var(--accent);
+  cursor:pointer;
   text-decoration:none;
-  font-weight:600;
 }
-
 footer{
   text-align:center;
-  font-size:.85rem;
+  font-size:.8rem;
   color:var(--muted);
-  padding:15px 0;
+  padding:14px;
 }
-
 @media(max-width:900px){
   .dashboard{grid-template-columns:1fr}
 }
@@ -152,71 +100,40 @@ footer{
 <nav class="navbar">
   <div class="logo">Sri Vajana</div>
   <div>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=srivajanas.ad24@bitsathy.ac.in" target="_blank">Email</a>
-    <a href="https://github.com/SriVajana" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/sri-vajana-s" target="_blank">LinkedIn</a>
+    <a href="#">GitHub</a>
+    <a href="#">LinkedIn</a>
   </div>
 </nav>
 
 <main class="dashboard">
 
-  <!-- LEFT -->
   <div class="card hero">
     <h1>Sri Vajana S</h1>
     <p>Aspiring Data Scientist</p>
-    <p>AI & Data Science undergraduate focused on statistics, machine learning fundamentals and problem-solving.</p>
+    <p>AI & Data Science undergraduate focused on ML and statistics.</p>
 
     <div class="buttons">
-      <a href="resume.pdf" class="btn primary" target="_blank">
-        <span class="icon">⬇</span> Download Resume
-      </a>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=srivajanas.ad24@bitsathy.ac.in" target="_blank" class="btn secondary">
-        📧 Contact
-      </a>
+      <!-- LOCAL FILE OPEN -->
+      <a href="resume.pdf" target="_blank" class="btn primary">Resume</a>
+      <a href="mailto:srivajanas.ad24@bitsathy.ac.in" class="btn secondary">Contact</a>
     </div>
 
-    <h3 style="margin-top:30px;color:var(--secondary)">Skills</h3>
-
-    <div class="skill">
-      <span>Python</span>
-      <div class="bar"><div style="width:85%"></div></div>
-    </div>
-
-    <div class="skill">
-      <span>C / C++</span>
-      <div class="bar"><div style="width:70%"></div></div>
-    </div>
-
-    <div class="skill">
-      <span>Statistics & Probability</span>
-      <div class="bar"><div style="width:80%"></div></div>
-    </div>
-
-    <div class="skill">
-      <span>Data Analysis</span>
-      <div class="bar"><div style="width:75%"></div></div>
-    </div>
+    <h3 style="margin-top:28px">Skills</h3>
+    <div class="skill"><span>Python</span><div class="bar"><div style="width:85%"></div></div></div>
+    <div class="skill"><span>C / C++</span><div class="bar"><div style="width:70%"></div></div></div>
+    <div class="skill"><span>Statistics</span><div class="bar"><div style="width:80%"></div></div></div>
   </div>
 
-  <!-- RIGHT -->
   <div class="card">
-    <h2 style="color:var(--secondary)">Projects</h2>
-
+    <h3>Projects</h3>
     <div class="project">
       <h3>Real-Time Human Pose Detection</h3>
-      <p>Conceptual AI system for exercise repetition counting using pose landmarks and anomaly detection.</p>
-      <a href="project.html">View Details →</a>
+      <p>Pose landmark detection for repetition counting.</p>
+      <a onclick="alert('Project details coming soon')">View details →</a>
     </div>
 
-    <h2 style="margin-top:30px;color:var(--secondary)">Education</h2>
-    <p>
-      <strong>B.Tech – AI & DS</strong><br>
-      Bannari Amman Institute of Technology (2024–2028)
-    </p>
-    <p>
-      <strong>HSC – 86.8%</strong><br>
-      Kongu Vellalar MHSS
-    </p>
+    <h3 style="margin-top:28px">Education</h3>
+    <p><strong>B.Tech – AI & DS</strong><br>Bannari Amman Institute of Technology</p>
   </div>
 
 </main>
@@ -225,3 +142,4 @@ footer{
 
 </body>
 </html>
+
